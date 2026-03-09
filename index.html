@@ -1,0 +1,322 @@
+```html id="fashioncode1"
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Fashion</title>
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+margin:0;
+background:#f8fafc;
+color:#1e293b;
+}
+
+header{
+background:#ec4899;
+padding:25px;
+text-align:center;
+font-size:36px;
+font-weight:bold;
+color:white;
+}
+
+.profile{
+background:#f1f5f9;
+text-align:center;
+padding:15px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+background:#1e293b;
+padding:10px;
+}
+
+nav button{
+background:#334155;
+border:none;
+padding:12px 18px;
+color:white;
+cursor:pointer;
+border-radius:6px;
+font-size:15px;
+}
+
+nav button:hover{
+background:#ec4899;
+}
+
+.section{
+display:none;
+padding:30px;
+width:85%;
+margin:auto;
+margin-top:20px;
+background:white;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section img{
+width:100%;
+border-radius:8px;
+margin:15px 0;
+}
+
+.active{
+display:block;
+}
+
+.brand-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.brand-card{
+text-align:center;
+}
+
+.brand-card img{
+width:120px;
+}
+
+.category-buttons{
+text-align:center;
+margin-bottom:20px;
+}
+
+.category-buttons button{
+margin:8px;
+padding:10px 15px;
+border:none;
+background:#ec4899;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.list-box{
+display:none;
+margin-top:20px;
+background:#f1f5f9;
+padding:15px;
+border-radius:6px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #cbd5f5;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#ec4899;
+color:white;
+}
+
+footer{
+margin-top:40px;
+background:#1e293b;
+text-align:center;
+padding:15px;
+color:white;
+}
+
+</style>
+
+<script>
+
+function showSection(id){
+let sections=document.querySelectorAll(".section")
+sections.forEach(sec=>sec.classList.remove("active"))
+document.getElementById(id).classList.add("active")
+}
+
+function showCategory(id){
+let lists=document.querySelectorAll(".list-box")
+lists.forEach(list=>list.style.display="none")
+document.getElementById(id).style.display="block"
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+FASHION
+</header>
+
+<div class="profile">
+<h3>M. Sai Rithika</h3>
+<h4>Reg No : RA2431243020010</h4>
+</div>
+
+<nav>
+<button onclick="showSection('intro')">Fashion Introduction</button>
+<button onclick="showSection('brands')">Top Fashion Brands</button>
+<button onclick="showSection('categories')">Fashion Categories</button>
+<button onclick="showSection('trends')">Fashion Trends</button>
+<button onclick="showSection('future')">Future of Fashion</button>
+</nav>
+
+<div id="intro" class="section active">
+
+<h2>Introduction to Fashion</h2>
+
+<img src="https://images.unsplash.com/photo-1445205170230-053b83016050">
+
+<p>
+Fashion is a powerful form of self-expression that allows people to showcase their personality and creativity through clothing and accessories. Over the years fashion has evolved from traditional clothing styles to modern global trends influenced by designers and social media.
+</p>
+
+<p>
+The fashion industry includes clothing design, textile production, marketing and fashion retail businesses. Fashion trends change frequently and are influenced by culture, technology and lifestyle.
+</p>
+
+</div>
+
+<div id="brands" class="section">
+
+<h2>Top Fashion Brands</h2>
+
+<p>
+These global fashion brands are known for their style and influence in the fashion industry.
+</p>
+
+<div class="brand-container">
+
+<div class="brand-card">
+<img src="https://1000logos.net/wp-content/uploads/2017/03/Nike-Logo.png">
+<p>Nike</p>
+</div>
+
+<div class="brand-card">
+<img src="https://1000logos.net/wp-content/uploads/2017/05/Zara-logo.png">
+<p>Zara</p>
+</div>
+
+</div>
+
+<table>
+
+<tr>
+<th>Brand</th>
+<th>Country</th>
+<th>Type</th>
+</tr>
+
+<tr>
+<td>Nike</td>
+<td>USA</td>
+<td>Sportswear</td>
+</tr>
+
+<tr>
+<td>Zara</td>
+<td>Spain</td>
+<td>Fast Fashion</td>
+</tr>
+
+</table>
+
+</div>
+
+<div id="categories" class="section">
+
+<h2>Fashion Categories</h2>
+
+<div class="category-buttons">
+<button onclick="showCategory('men')">Men Fashion</button>
+<button onclick="showCategory('women')">Women Fashion</button>
+<button onclick="showCategory('street')">Street Style</button>
+<button onclick="showCategory('sports')">Sportswear</button>
+</div>
+
+<div id="men" class="list-box">
+<ul>
+<li>Formal suits</li>
+<li>Casual shirts</li>
+<li>Denim jeans</li>
+<li>Blazers and jackets</li>
+</ul>
+</div>
+
+<div id="women" class="list-box">
+<ul>
+<li>Dresses and gowns</li>
+<li>Traditional wear</li>
+<li>Handbags and accessories</li>
+<li>High heels and footwear</li>
+</ul>
+</div>
+
+<div id="street" class="list-box">
+<ul>
+<li>Oversized hoodies</li>
+<li>Sneakers</li>
+<li>Denim jackets</li>
+<li>Graphic t-shirts</li>
+</ul>
+</div>
+
+<div id="sports" class="list-box">
+<ul>
+<li>Track suits</li>
+<li>Running shoes</li>
+<li>Gym wear</li>
+<li>Performance jackets</li>
+</ul>
+</div>
+
+</div>
+
+<div id="trends" class="section">
+
+<h2>Fashion Trends</h2>
+
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
+
+<p>
+Fashion trends change every season as designers introduce new collections. Current trends include sustainable fashion, oversized clothing and vintage styles returning to popularity.
+</p>
+
+</div>
+
+<div id="future" class="section">
+
+<h2>Future of Fashion</h2>
+
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+
+<p>
+The future of fashion will combine technology and sustainability. Smart fabrics and eco-friendly clothing production will shape the future of the fashion industry.
+</p>
+
+</div>
+
+<footer>
+<p>Fashion Blog | Created by M. Sai Rithika</p>
+</footer>
+
+</body>
+
+</html>
+```
+
